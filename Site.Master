@@ -47,8 +47,6 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <%--<li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>--%>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li> &nbsp;  &nbsp; &nbsp;
                         <asp:DropDownList ID="drpChapter" runat="server" AutoPostBack="true" OnSelectedIndexChanged="drpChapter_SelectedIndexChanged">
                             <asp:ListItem Value="0">PathFinder Solution</asp:ListItem>
                             <asp:ListItem Value="1">01 Kinematics of Translational Motion </asp:ListItem>

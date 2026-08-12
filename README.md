@@ -8,7 +8,9 @@ Pathfinder is a study companion for navigating core physics topics. It presents 
 
 ## Repository contents
 
-The repository contains 16 numbered physics solution pages covering kinematics through modern physics, plus the shared Web Forms application shell, styling, client-side libraries, and project configuration.
+The repository contains 16 numbered physics topic pages covering kinematics through modern physics. Each page links to available solution material hosted externally, alongside the shared Web Forms application shell, styling, client-side libraries, and project configuration.
+
+> **Current limitation:** the collection is not complete. The topic pages intentionally contain 210 disabled solution buttons where solution links are unavailable. These placeholders remain disabled; this repository does not invent or claim those missing solutions.
 
 ## Structure
 
@@ -19,11 +21,10 @@ PathFinder/
 ├── Content/                                      # Site and Bootstrap styles
 ├── Scripts/                                      # jQuery, Bootstrap, Modernizr, Web Forms scripts
 ├── Properties/                                   # Assembly metadata
-├── Image/                                        # Site image assets
 ├── Site.Master                                   # Shared desktop layout/navigation
 ├── Site.Mobile.Master                            # Mobile layout
+├── ViewSwitcher.ascx                             # Desktop/mobile view switcher
 ├── Default.aspx                                  # Application landing page
-├── About.aspx and Contact.aspx                   # Supporting pages
 ├── PathFinder.csproj and PathFinder.sln          # Visual Studio project/solution
 ├── packages.config                               # NuGet dependency manifest
 └── Web.config                                    # ASP.NET runtime configuration
@@ -39,7 +40,8 @@ Each `.aspx` page is accompanied by its C# code-behind (`.aspx.cs`) and generate
 - .NET Framework 4.7.2
 - Visual Studio 2019 or later with the **ASP.NET and web development** workload
 - NuGet package restore
-- Bootstrap 5.2.3, jQuery 3.7.0, and Modernizr 2.8.3
+- Bootstrap 5.2.3, jQuery 3.7.0, and Modernizr 2.8.3 (third-party client assets restored through NuGet and retained where referenced)
+- Microsoft ASP.NET Web Forms, Friendly URLs, Web Optimization, and Microsoft Ajax support packages
 
 ## Requirements
 
@@ -87,7 +89,7 @@ The remaining solution URLs follow the same numbered filenames visible at the re
 
 ## Testing
 
-The archive does not contain an automated test project. Use the following checks on Windows:
+The repository does not contain an automated test project. Use the following checks on Windows:
 
 ```bat
 nuget restore PathFinder.sln
@@ -96,10 +98,12 @@ msbuild PathFinder.sln /t:Rebuild /p:Configuration=Debug
 
 After the build succeeds, launch the site and perform a smoke test:
 
-1. Open the home, About, and Contact pages.
+1. Open the home page.
 2. Open each numbered topic page from `01` through `16`.
-3. Confirm the navigation, styles, equations, and mobile view render correctly.
+3. Confirm the navigation, styles, solution links, disabled placeholders, and mobile view render correctly.
 4. Confirm the browser console and server output show no errors.
+
+The current public-repository cleanup was performed on macOS, where full .NET Framework 4.7.2 and compatible MSBuild tooling were unavailable. The structural checks passed, but a complete Windows build was not verified as part of that cleanup.
 
 ## Example usage
 
@@ -115,4 +119,4 @@ Kathan Patel
 
 ## License
 
-Licensed under the [MIT License](LICENSE).
+The original application code authored by Kathan Patel is licensed under the [MIT License](LICENSE). The license does not cover third-party libraries, externally linked resources, Pathfinder materials, course materials, questions, or solutions; those remain subject to their respective owners' rights and terms.
