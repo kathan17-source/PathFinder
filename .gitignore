@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# NuGet restores
+packages/
+*.nupkg
+
+# Test and coverage output
+TestResults/
+*.coverage
+*.coveragexml
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local Codex working files
+work/
+outputs/
