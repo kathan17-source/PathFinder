@@ -108,7 +108,7 @@ After the build succeeds, launch the site and perform a smoke test:
 3. Confirm the navigation, styles, solution links, disabled placeholders, and mobile view render correctly.
 4. Confirm the browser console and server output show no errors.
 
-A complete Windows/.NET Framework build and IIS Express runtime have not been verified in this review. A source inventory does not substitute for those checks. To reproduce the catalog count with optional Python 3 tooling, run `python Scripts/audit_catalog.py`; Python is not required by the Web Forms application itself.
+[Windows CI](https://github.com/kathan17-source/PathFinder/actions/runs/40463577633) reproduced the inventory, restored NuGet packages and successfully rebuilt the application in Release configuration on Windows Server 2022 with Visual Studio 2022 MSBuild and .NET Framework 4.7.2. IIS Express/browser runtime and external solution availability remain unverified. To reproduce the catalog count with optional Python 3 tooling, run `python Scripts/audit_catalog.py`; Python is not required by the Web Forms application itself.
 
 ## Example usage
 
