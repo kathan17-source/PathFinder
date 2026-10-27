@@ -1,0 +1,31 @@
+name: Catalog and Windows build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Reproduce source inventory
+        shell: pwsh
+        run: |
+          python Scripts/audit_catalog.py > inventory-current.json
+          python -c "import json; assert json.load(open('inventory-current.json')) == json.load(open('docs/catalog-inventory.json'))"
+      - name: Restore NuGet packages
+        shell: pwsh
+        run: |
+          nuget restore PathFinder.sln -NonInteractive
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Build classic ASP.NET application
+        shell: pwsh
+        run: |
+          $finder = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $builder = & $finder -latest -requires Microsoft.Component.MSBuild -find 'MSBuild\**\Bin\MSBuild.exe' | Select-Object -First 1
+          if (-not $builder) { throw 'MSBuild was not found' }
+          & $builder PathFinder.sln /t:Rebuild /p:Configuration=Release /p:VisualStudioVersion=17.0 /verbosity:minimal
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

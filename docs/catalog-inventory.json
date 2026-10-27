@@ -1,0 +1,230 @@
+{
+  "method": "ASPX anchors with button1; inclusive numeric ranges; identities are page/section/problem number",
+  "totals": {
+    "buttons": 1250,
+    "problems": 1293,
+    "external_link_buttons": 1029,
+    "external_link_problems": 1070,
+    "disabled_buttons": 210,
+    "disabled_problems": 212,
+    "unavailable_placeholder_buttons": 11,
+    "unavailable_placeholder_problems": 11
+  },
+  "unique_external_urls": 1029,
+  "pages": [
+    {
+      "page": "01_kinematics.aspx",
+      "buttons": 108,
+      "problems": 116,
+      "external_link_buttons": 108,
+      "external_link_problems": 116,
+      "placeholders": []
+    },
+    {
+      "page": "02_LawsOfMotion.aspx",
+      "buttons": 140,
+      "problems": 144,
+      "external_link_buttons": 134,
+      "external_link_problems": 136,
+      "disabled_buttons": 6,
+      "disabled_problems": 8,
+      "placeholders": []
+    },
+    {
+      "page": "03_WorkEnergyAndPower.aspx",
+      "buttons": 71,
+      "problems": 73,
+      "external_link_buttons": 63,
+      "external_link_problems": 65,
+      "disabled_buttons": 8,
+      "disabled_problems": 8,
+      "placeholders": []
+    },
+    {
+      "page": "04_CentreOfMass.aspx",
+      "buttons": 95,
+      "problems": 100,
+      "external_link_buttons": 66,
+      "external_link_problems": 71,
+      "disabled_buttons": 29,
+      "disabled_problems": 29,
+      "placeholders": []
+    },
+    {
+      "page": "05_Rotation.aspx",
+      "buttons": 110,
+      "problems": 113,
+      "external_link_buttons": 84,
+      "external_link_problems": 87,
+      "disabled_buttons": 26,
+      "disabled_problems": 26,
+      "placeholders": []
+    },
+    {
+      "page": "06_Gravitation.aspx",
+      "buttons": 26,
+      "problems": 26,
+      "external_link_buttons": 26,
+      "external_link_problems": 26,
+      "placeholders": []
+    },
+    {
+      "page": "07_Fluids.aspx",
+      "buttons": 67,
+      "problems": 68,
+      "external_link_buttons": 50,
+      "external_link_problems": 51,
+      "disabled_buttons": 17,
+      "disabled_problems": 17,
+      "placeholders": []
+    },
+    {
+      "page": "08_ThermalPhysics.aspx",
+      "buttons": 106,
+      "problems": 109,
+      "external_link_buttons": 57,
+      "external_link_problems": 60,
+      "disabled_buttons": 49,
+      "disabled_problems": 49,
+      "placeholders": []
+    },
+    {
+      "page": "09_PropertiesOfMatter.aspx",
+      "buttons": 33,
+      "problems": 33,
+      "external_link_buttons": 23,
+      "external_link_problems": 23,
+      "unavailable_placeholder_buttons": 10,
+      "unavailable_placeholder_problems": 10,
+      "placeholders": [
+        {
+          "section": "Multiple Choice Questions",
+          "label": "03",
+          "href": ""
+        },
+        {
+          "section": "Build Your Understanding",
+          "label": "10",
+          "href": ""
+        },
+        {
+          "section": "Check Your Understanding",
+          "label": "01",
+          "href": ""
+        },
+        {
+          "section": "Check Your Understanding",
+          "label": "02",
+          "href": ""
+        },
+        {
+          "section": "Check Your Understanding",
+          "label": "04",
+          "href": ""
+        },
+        {
+          "section": "Check Your Understanding",
+          "label": "06",
+          "href": ""
+        },
+        {
+          "section": "Check Your Understanding",
+          "label": "07",
+          "href": ""
+        },
+        {
+          "section": "Challenge Your Understanding",
+          "label": "01",
+          "href": ""
+        },
+        {
+          "section": "Challenge Your Understanding",
+          "label": "02",
+          "href": ""
+        },
+        {
+          "section": "Challenge Your Understanding",
+          "label": "03",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "page": "10_WavesAndOscillations.aspx",
+      "buttons": 57,
+      "problems": 57,
+      "external_link_buttons": 48,
+      "external_link_problems": 48,
+      "disabled_buttons": 9,
+      "disabled_problems": 9,
+      "placeholders": []
+    },
+    {
+      "page": "11_Optics.aspx",
+      "buttons": 67,
+      "problems": 71,
+      "external_link_buttons": 52,
+      "external_link_problems": 56,
+      "disabled_buttons": 15,
+      "disabled_problems": 15,
+      "placeholders": []
+    },
+    {
+      "page": "12_Electrostatics.aspx",
+      "buttons": 115,
+      "problems": 117,
+      "external_link_buttons": 103,
+      "external_link_problems": 105,
+      "disabled_buttons": 12,
+      "disabled_problems": 12,
+      "placeholders": []
+    },
+    {
+      "page": "13_ElectricCurrent.aspx",
+      "buttons": 97,
+      "problems": 100,
+      "external_link_buttons": 90,
+      "external_link_problems": 93,
+      "disabled_buttons": 7,
+      "disabled_problems": 7,
+      "placeholders": []
+    },
+    {
+      "page": "14_MagneticEffectsOfCurrent.aspx",
+      "buttons": 51,
+      "problems": 55,
+      "external_link_buttons": 38,
+      "external_link_problems": 42,
+      "disabled_buttons": 13,
+      "disabled_problems": 13,
+      "placeholders": []
+    },
+    {
+      "page": "15_ElectromagneticInduction.aspx",
+      "buttons": 77,
+      "problems": 77,
+      "external_link_buttons": 57,
+      "external_link_problems": 57,
+      "disabled_buttons": 19,
+      "disabled_problems": 19,
+      "unavailable_placeholder_buttons": 1,
+      "unavailable_placeholder_problems": 1,
+      "placeholders": [
+        {
+          "section": "Challenge Your Understanding",
+          "label": "01",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "page": "16_ModernPhysics.aspx",
+      "buttons": 30,
+      "problems": 34,
+      "external_link_buttons": 30,
+      "external_link_problems": 34,
+      "placeholders": []
+    }
+  ],
+  "external_availability": "Not established by source inventory; Google Drive permissions and solution correctness require separate verification"
+}

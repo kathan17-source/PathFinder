@@ -1,16 +1,21 @@
-# PathFinder Solutions
+# PathFinder — Physics Olympiad Problem & Solution Index
 
-PathFinder Solutions is an ASP.NET Web Forms website containing concise, chapter-by-chapter physics notes and worked formula references for senior-secondary students.
+PathFinder is an ASP.NET Web Forms study companion for senior-secondary physics Olympiad preparation. Sixteen chapter pages organize numbered problem references from the Pathfinder physics material into multiple-choice, understanding and challenge sections, with links to externally hosted solution resources where configured. It is a browsable index, not a bundled textbook or a verified collection of complete worked solutions.
 
-## What Pathfinder is
+## What is actually available
 
-Pathfinder is a study companion for navigating core physics topics. It presents definitions, equations, principles, and examples in a browsable web application rather than as isolated documents.
+The source contains **1,250 navigation buttons covering 1,293 numbered problem references**. Some buttons cover ranges of problems. The [reproducible catalog inventory](docs/CATALOG_INVENTORY.md) distinguishes buttons, problem numbers and external availability:
 
-## Repository contents
+| Source category | Buttons | Numbered problem references |
+|---|---:|---:|
+| Configured external solution links | 1,029 | 1,070 |
+| Disabled placeholders | 210 | 212 |
+| Other unavailable placeholders | 11 | 11 |
+| Total | 1,250 | 1,293 |
 
-The repository contains 16 numbered physics topic pages covering kinematics through modern physics. Each page links to available solution material hosted externally, alongside the shared Web Forms application shell, styling, client-side libraries, and project configuration.
+There are 1,029 unique Google Drive URLs. A configured link is **not a verified working solution**: access permissions, live availability, solution contents and correctness have not been established for the full collection. Ten unavailable placeholders have no `href`; one uses `href="#"`. No missing solution is invented or implied by these counts.
 
-> **Current limitation:** the collection is not complete. The topic pages intentionally contain 210 disabled solution buttons where solution links are unavailable. These placeholders remain disabled; this repository does not invent or claim those missing solutions.
+The chapters cover kinematics through modern physics. The repository includes the Web Forms application shell, shared navigation, styles and client libraries; questions and solution resources remain external. The home page still contains the standard ASP.NET starter content, so open a numbered chapter to inspect the physics catalog.
 
 ## Structure
 
@@ -69,7 +74,7 @@ msbuild PathFinder.sln /p:Configuration=Debug
 
 Alternatively, open `PathFinder.sln` in Visual Studio. Visual Studio normally restores the NuGet packages automatically; if it does not, right-click the solution and select **Restore NuGet Packages**.
 
-## Running the application and individual solutions
+## Running the application and opening chapters
 
 In Visual Studio:
 
@@ -77,7 +82,7 @@ In Visual Studio:
 2. Set `PathFinder` as the startup project.
 3. Press `F5` to run with debugging or `Ctrl+F5` to run without debugging.
 
-To open a specific solution, append its page name to the local URL shown by Visual Studio. For example:
+To open a specific chapter, append its page name to the local URL shown by Visual Studio. For example:
 
 ```text
 https://localhost:<port>/01_kinematics.aspx
@@ -85,7 +90,7 @@ https://localhost:<port>/05_Rotation.aspx
 https://localhost:<port>/16_ModernPhysics.aspx
 ```
 
-The remaining solution URLs follow the same numbered filenames visible at the repository root. You can also navigate between chapters from the website menu.
+The remaining chapter URLs follow the same numbered filenames visible at the repository root. You can also navigate between chapters from the website menu.
 
 ## Testing
 
@@ -103,7 +108,7 @@ After the build succeeds, launch the site and perform a smoke test:
 3. Confirm the navigation, styles, solution links, disabled placeholders, and mobile view render correctly.
 4. Confirm the browser console and server output show no errors.
 
-The current public-repository cleanup was performed on macOS, where full .NET Framework 4.7.2 and compatible MSBuild tooling were unavailable. The structural checks passed, but a complete Windows build was not verified as part of that cleanup.
+[Windows CI](https://github.com/kathan17-source/PathFinder/actions/runs/40463577633) reproduced the inventory, restored NuGet packages and successfully rebuilt the application in Release configuration on Windows Server 2022 with Visual Studio 2022 MSBuild and .NET Framework 4.7.2. IIS Express/browser runtime and external solution availability remain unverified. To reproduce the catalog count with optional Python 3 tooling, run `python Scripts/audit_catalog.py`; Python is not required by the Web Forms application itself.
 
 ## Example usage
 
